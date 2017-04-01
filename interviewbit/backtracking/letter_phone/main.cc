@@ -13,7 +13,7 @@
  * Note:
  * Time taken: 37/42 minutes
  * Complexities:
- *      Time: O(~3 * |n|) = O(|n|)
+ *      Time: O(~3 ^ n) = O(n)
  *      Space: O(|n|)
  * Idea: While iterating first number's mapped characters, recur into input's next character's mapping
  * Add to the result vector when recursion hits the length of input.
@@ -62,7 +62,7 @@ vector<string> letterCombinations(string A) {
 }
 
 int main() {
-    auto answer = letterCombinations("23");
+    auto answer = letterCombinations("234");
     for (auto s : answer) {
         cout << s << endl;
     }
