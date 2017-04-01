@@ -21,7 +21,9 @@
  * Complexities:
  *      Time: O(2^n)
  *      Space: O(n)
- * Idea: 
+ * Idea: We do a dfs for entire map. The map is defined as for each number
+ * there are 2 nodes, on and off. When it hits the end of the list, output accumulated
+ * numbers
  * -------------------------------------------------------------------------------
  */
 
@@ -57,5 +59,15 @@ vector<vector<int> > subsets(vector<int> &S) {
 
 
 int main() {
-
+    vector<int> input = {1,2,3};
+    vector<vector<int> > mySubsets = subsets(input);
+    for (auto i : mySubsets) {
+        if (i.empty()) {cout << "[]";}
+        else {
+            for (auto j : i) {
+                cout << j;
+            }
+        }
+        cout << endl;
+    }
 }
