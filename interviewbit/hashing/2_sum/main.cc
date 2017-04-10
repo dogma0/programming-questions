@@ -27,7 +27,8 @@
  */
 
 #include <iostream>
-
+#include <vector>
+#include <unordered_map>
 using namespace std;
 
 vector<int> twoSum(const vector<int> &A, int target) {
@@ -45,5 +46,9 @@ vector<int> twoSum(const vector<int> &A, int target) {
     return result;
 }
 int main() {
-
+    vector<int> tmp{2,7,7,11,15};
+    auto result = twoSum(tmp, 9);
+    for (auto i : result) {
+        cout << i << ",";
+    }
 }
